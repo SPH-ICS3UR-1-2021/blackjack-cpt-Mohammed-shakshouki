@@ -60,6 +60,12 @@ public class Dealer {
           else(
     }         handScore+=hand.get(1).getValue();
           )
+    }
+    //system.out.println(handScore);
+
+}      
+
+
 
     
     public void dealerTurn(Deck cards){
@@ -68,5 +74,12 @@ public class Dealer {
         //While the handScore<17...
             //call hit
             //display new card and score
+            displayHand();
+            calculateScore();
+             System.out.println("Dealer's Score: "+handScore);
+            while(handScore<17)(
+                hit(cards);
+                System.out.println("New card: "+hand.get(hand.size()-1).getName());
+                System.out.println("Dealer's Score: "+handScore);
     }
 }
