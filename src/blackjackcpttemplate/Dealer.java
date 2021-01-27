@@ -3,7 +3,7 @@ package blackjackcpttemplate;
 import java.util.*;
 /**
  * Dealer class for ICS3U Quad 2 2021 CPT
- * @author k_zeb
+ * @author Mohammed Shakshouki
  */
 public class Dealer {
     /*
@@ -19,23 +19,48 @@ public class Dealer {
     public Dealer(){
         //set the hand to an empty arraylist
         //initialize handScore to 0
+        this.hand=new ArrayList<Card>();
+        this.handScore=0;
     }
     
     public void hit(Deck cards){
         //call the deal method on cards
         //Add the returned value to the hand.
-        //Call calculateScore        
-    }
+        //Call calculateScore
+               Card newCard=cards.deal();
+          hand.add(newCard);   
+          //system.out.println("New card: "+newCard.getName());
+          this.calculateScore();
+
+           
     
     public void displayHand(){
         //print out the cards in the dealer's hand
+        String msg = "Dealer's Top Card(s) :";
+        for(int i=l;i<hand.size();i++)(
+            msg+=" "+hand.get(i).getName();
+            if(i<hand.size()-l)(
+                 msg+=",";
+            )    
     }
+     System.out.println(msg);
     
-    public void calculateScore(){
+    
+  
+  public void calculateScore(){
         //add up the score in the hand and print it out
         //save the value in handScore
-        
-    }
+     this.handScore=0;
+           int aces=0;
+          fort(int i=0;i<hand.size();i++)(
+               if(hand.get(i).getValue()==l)   
+                   aces++;
+
+          )    
+          else(
+    }         handScore+=hand.get(1).getValue();
+          )
+
     
     public void dealerTurn(Deck cards){
         //Display the dealer's hand

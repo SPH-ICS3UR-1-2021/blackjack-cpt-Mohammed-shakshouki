@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * A single card for ICS3U Quad 2 2021 CPT
  *
- * @author k_zeb
+ * @author Mohammed Shakshouki
  */
 public class Card {
 
@@ -27,6 +27,8 @@ public class Card {
     public Card(int v, String n) {
         //set the value to v
         //set the name to n
+        this.value=v;
+        this.name=n;
     }
 
     /**
